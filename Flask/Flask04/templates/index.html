@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>HomePage</title>
+</head>
+<body>
+<h1>ABOUT ME</h1>
+<img src={{url_for('static',filename="aman.jpg")}} height="100" width="100">
+<p>I am Aman Bassi and i am pursuing my Master's in Computer Sciences from University of Texas at Arlington.</p>
+<ol>
+<li> I am a kind of an individual who is Optimistic, self-motivated and full of enthusiasm.</li>
+<li> I am eager to learn new things</li>
+</ol>
+<form method="POST" action="{{url_for('show_index')}}">
+	enter username:<input type="text" name="user">
+	<input type="submit" value="Submitt">
+</form>
+</body>
+</html>
