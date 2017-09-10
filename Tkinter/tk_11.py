@@ -1,0 +1,32 @@
+from tkinter import *
+
+root=Tk()
+menu=Menu(root)
+root.config(menu=menu)
+
+submenu=Menu(menu)
+menu.add_cascade(label="File",menu=submenu)
+submenu.add_command(label="New Project...")
+submenu.add_command(label="New...")
+submenu.add_command(label="New Scratch File")
+submenu.add_command(label="Open")
+submenu.add_command(label="Save As")
+submenu.add_command(label="Open Recent")
+
+menu2=Menu(menu)
+menu.add_cascade(label="Edit",menu=menu2)
+menu2.add_command(label="Cut")
+menu2.add_command(label="Copy")
+menu2.add_command(label="Paste")
+menu2.add_command(label="Delete")
+menu3=Menu(menu)
+menu.add_cascade(label="View",menu=menu3)
+menu3.add_command(label="Tool Windows")
+menu3.add_command(label="Quick Defination")
+menu3.add_command(label="Recent Files")
+
+frame=Frame(root ,bg="blue")
+label1=Label(frame,text="we Have a Frame")
+label1.pack()
+frame.pack(side=TOP,fill=X)
+root.mainloop()
