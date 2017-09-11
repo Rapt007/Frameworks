@@ -1,0 +1,22 @@
+from tkinter import *
+def doNothing():
+    print ("hey")
+
+root=Tk()
+menu=Menu(root)
+root.config(menu=menu)
+submenu=Menu(menu)
+menu.add_cascade(label="Tools", menu=submenu)
+submenu.add_command(label="Tasks & Contexts")
+submenu.add_command(label="Save File as Templates")
+submenu.add_command(label="Python Console")
+submenu.add_separator()
+frame=Frame(root,bg="yellow")
+button=Button(frame,text="Jasmine",command=doNothing,bg="red")
+button1=Button(frame,text="Panki",command=doNothing,bg="purple")
+button.pack(side=LEFT,fill=X)
+button1.pack(side=LEFT,fill=X)
+frame.pack(side=TOP,fill=X)
+label=Label(root,text="do nothing")
+label.pack(side=BOTTOM,fill=X)
+root.mainloop()
